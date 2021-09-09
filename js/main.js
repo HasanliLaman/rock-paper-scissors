@@ -69,15 +69,15 @@ for (const btn of btnRPS) {
   btn.addEventListener("click", function () {
     //Change image after ME choose one of RPS
     if (btn.classList.contains("rock")) {
-      meChoice.src = "images/rock.svg";
+      meChoice.src = "images/rock.940dfa40.svg";
       mePlayed = "rock";
     }
     if (btn.classList.contains("paper")) {
-      meChoice.src = "images/paper.svg";
+      meChoice.src = "images/paper.2b65e653.svg";
       mePlayed = "paper";
     }
     if (btn.classList.contains("scissors")) {
-      meChoice.src = "images/scissors.svg";
+      meChoice.src = "images/scissors.5a939b7d.svg";
       mePlayed = "scissors";
     }
 
