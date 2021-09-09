@@ -1,1 +1,1 @@
-Rock Paper Scissors game - <a>Live site</a>
+Rock Paper Scissors game - <a href='https://rock-paper-scissors-lmnhsnl.netlify.app/'>Live site</a>
