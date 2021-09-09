@@ -14,6 +14,8 @@ const meChoice = document.querySelector(".me-choice");
 const pcChoice = document.querySelector(".pc-choice");
 const meScoreDisplay = document.querySelector(".me-score");
 const pcScoreDisplay = document.querySelector(".pc-score");
+const meWinner = document.querySelector(".me-winner");
+const pcWinner = document.querySelector(".pc-winner");
 const btnReset = document.querySelector(".btn--reset");
 const btnInfo = document.querySelector(".btn--info");
 const btnCloseInfo = document.querySelector(".btn--info-close");
@@ -67,39 +69,21 @@ for (const btn of btnRPS) {
   btn.addEventListener("click", function () {
     //Change image after ME choose one of RPS
     if (btn.classList.contains("rock")) {
-      meChoice.innerHTML = `
-    <img
-      src="images/rock.svg"
-      class="icon--large me-choice"
-      alt=""
-    />`;
+      meChoice.src = "images/rock.svg";
       mePlayed = "rock";
     }
     if (btn.classList.contains("paper")) {
-      meChoice.innerHTML = `
-    <img
-      src="/images/paper.svg"
-      class="icon--large me-choice"
-      alt=""
-    />`;
+      meChoice.src = "images/paper.svg";
       mePlayed = "paper";
     }
     if (btn.classList.contains("scissors")) {
-      meChoice.innerHTML = `
-    <img
-      src="/images/scissors.svg"
-      class="icon--large me-choice"
-      alt=""
-    />`;
+      meChoice.src = "images/scissors.svg";
       mePlayed = "scissors";
     }
 
     //PC make choice randomly and image changes according to it
     const pcChoiceIndex = Math.floor(Math.random() * 18);
-    pcChoice.innerHTML = `
-  <img src="/images/${pcChoicesArray[pcChoiceIndex]}.svg"
-    class="icon--large "
-    alt="" />`;
+    pcChoice.src = `images/${pcChoicesArray[pcChoiceIndex]}.svg`;
     pcPlayed = pcChoicesArray[pcChoiceIndex];
 
     //Change scores according to RSP pairs
@@ -111,24 +95,8 @@ for (const btn of btnRPS) {
     if (meScore === 3 || pcScore === 3) {
       btnRPS.forEach((val) => (val.disabled = true));
     }
-    if (meScore === 3) {
-      meChoice.insertAdjacentHTML(
-        "afterbegin",
-        `<img
-  class="icon--winner me--winner"
-  src="images/winner.svg"
-  alt="winner badge"/>`
-      );
-    }
-    if (pcScore === 3) {
-      pcChoice.insertAdjacentHTML(
-        "afterbegin",
-        `<img
-    class="icon--winner pc--winner"
-    src="images/winner.svg"
-    alt="winner badge"/>`
-      );
-    }
+    if (meScore === 3) meWinner.style.opacity = 100;
+    if (pcScore === 3) pcWinner.style.opacity = 100;
   });
 }
 
@@ -138,8 +106,8 @@ btnReset.addEventListener("click", function () {
   pcScore = 0;
   mePlayed = "";
   pcPlayed = "";
-  document.querySelector(".me--winner")?.remove();
-  document.querySelector(".pc--winner")?.remove();
+  meWinner.style.opacity = 0;
+  pcWinner.style.opacity = 0;
   meChoice.src = "images/question.svg";
   pcChoice.src = "images/question.svg";
   meScoreDisplay.textContent = "0";
