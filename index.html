@@ -37,7 +37,7 @@
       <button class="btn btn--fixed btn--info">INFO</button>
 
       <section class="block block--primary player player--me">
-        <p aria-label="player name" class="player-name"><span>M</span>E</p>
+        <p class="player-name"><span>M</span>E</p>
 
         <div class="block block--accent block--play">
           <img
@@ -62,13 +62,13 @@
             <i class="fas fa-hand-paper"></i>
           </button>
           <div class="block--accent block--score me-score">
-            <p aria-label="my score">0</p>
+            <p>0</p>
           </div>
         </div>
       </section>
 
       <section class="block block--secondary player player--pc">
-        <p aria-label="player name" class="player-name"><span>P</span>C</p>
+        <p class="player-name"><span>P</span>C</p>
 
         <div class="block block--accent block--play">
           <img
@@ -110,11 +110,12 @@
         winner and the game is finished. Additionally, you can reset the game
         anytime by clicking the reset button. Have fun 🖤.
       </p>
-      <span aria-label="close button of info block" class="btn--info-close">
-        ✕
-      </span>
+      <span class="btn--info-close"> ✕ </span>
     </div>
     <div class="overlay hidden"></div>
+    <img src="images/rock.svg" class="hidden" alt="" />
+    <img src="images/paper.svg" class="hidden" alt="" />
+    <img src="images/scissors.svg" class="hidden" alt="" />
     <script src="js/main.js"></script>
     <script
       src="https://kit.fontawesome.com/269f80ef9f.js"
