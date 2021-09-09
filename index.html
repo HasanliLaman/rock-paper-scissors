@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Traditional Rock Paper Scissors game where you play against your PC."
+    />
+    <meta property="og:title" content="Rock Paper Scissors" />
+    <meta
+      property="og:description"
+      content="Traditional Rock Paper Scissors game where you play against your PC."
+    />
+    <meta property="og:type" content="website" />
+
+    <title>Rock Scissors Paper Game</title>
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="game">
+      <button class="btn btn--reset btn--fixed">RESET</button>
+      <button class="btn btn--fixed btn--info">INFO</button>
+
+      <section class="block block--primary player player--me">
+        <p aria-label="player name" class="player-name"><span>M</span>E</p>
+
+        <div class="block block--accent block--play">
+          <img
+            class="icon--winner me-winner"
+            src="images/winner.svg"
+            alt="winner badge"
+          />
+          <img
+            src="/images/question.svg"
+            class="icon--large me-choice"
+            alt=""
+          />
+        </div>
+        <div class="btn-container">
+          <button aria-label="rock button" class="btn btn--small rock">
+            <i class="fas fa-fist-raised"></i>
+          </button>
+          <button aria-label="scissors button" class="btn btn--small scissors">
+            <i class="fas fa-hand-peace"></i>
+          </button>
+          <button aria-label="paper button" class="btn btn--small paper">
+            <i class="fas fa-hand-paper"></i>
+          </button>
+          <div class="block--accent block--score me-score">
+            <p aria-label="my score">0</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="block block--secondary player player--pc">
+        <p aria-label="player name" class="player-name"><span>P</span>C</p>
+
+        <div class="block block--accent block--play">
+          <img
+            class="icon--winner pc-winner"
+            src="images/winner.svg"
+            alt="winner badge"
+          />
+          <img
+            src="/images/question.svg"
+            class="icon--large pc-choice"
+            alt=""
+          />
+        </div>
+
+        <div class="btn-container">
+          <button class="btn btn--large">Suprise 😉</button>
+          <div class="block--accent block--score pc-score">
+            <p aria-label="pc score">0</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <p class="credits">
+      © Created by
+      <a
+        href="https://github.com/lmnhsnl"
+        target="_blank"
+        rel="noopener noreferrer"
+        >Laman Hasanli</a
+      >
+    </p>
+
+    <div class="block--accent block--info hidden">
+      <p>Hello Friends!</p>
+      <p>
+        This is a traditional Rock Paper Scissors game, but here you play
+        against your PC. PC makes choices randomly and don't worry it has no
+        idea what you choose. If one of you gets the score of 3, then it is the
+        winner and the game is finished. Additionally, you can reset the game
+        anytime by clicking the reset button. Have fun 🖤.
+      </p>
+      <span aria-label="close button of info block" class="btn--info-close">
+        ✕
+      </span>
+    </div>
+    <div class="overlay hidden"></div>
+    <script src="js/main.js"></script>
+    <script
+      src="https://kit.fontawesome.com/269f80ef9f.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
