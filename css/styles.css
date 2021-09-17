@@ -191,7 +191,7 @@ body {
   line-height: 1.5;
   max-width: 300px;
   padding: 2.5rem;
-  position: absolute;
+  position: fixed;
   top: 50%;
   transform: translate(-50%, -50%);
   z-index: 10;
@@ -223,7 +223,7 @@ body {
 }
 
 .overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
