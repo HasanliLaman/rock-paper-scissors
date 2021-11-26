@@ -1,1 +1,1 @@
-Rock Paper Scissors game - <a href='https://lmnhsnl.github.io/rock-paper-scissors/'>Live site</a>
+Rock Paper Scissors game - <a href='https://HasanliLaman.github.io/rock-paper-scissors/'>Live site</a>
